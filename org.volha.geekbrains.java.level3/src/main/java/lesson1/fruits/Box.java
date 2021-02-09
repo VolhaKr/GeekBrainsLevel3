@@ -37,6 +37,10 @@ public class Box<T extends Fruit> {
     //    Написать метод, который позволяет пересыпать фрукты из текущей коробки в другую. Помним про сортировку фруктов: нельзя яблоки высыпать в коробку с апельсинами.
     //    Соответственно, в текущей коробке фруктов не остается, а в другую перекидываются объекты, которые были в первой;
     public void reloadTo(Box<T> another) {
+        //подслушала в конце второго урока
+        if (this == another){
+            return;
+        }
         for ( T fruit : fruits ) {
             another.putFruitIntoBox(fruit);
             //  this.fruits.remove(fruit);
@@ -48,7 +52,7 @@ public class Box<T extends Fruit> {
         System.out.println("Box ");
         System.out.println("Fruits in the box:");
         for ( T fruit : fruits ) {
-            System.out.println(fruit + " weght " + fruit.WEIGHT);
+            System.out.println(fruit + " weight " + fruit.WEIGHT);
         }
         System.out.println("Box weight " + this.getWeight());
     }

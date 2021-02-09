@@ -39,6 +39,8 @@ public class MainFruitsApp {
         System.out.println("After reload from 1 to 2");
         appleBox1.printInfo();
         appleBox2.printInfo();
-
+        appleBox2.reloadTo(appleBox2);
+        System.out.println("After reload from 2 to 2");
+        appleBox2.printInfo();
     }
 }
